@@ -3,6 +3,7 @@ import sys, os
 from multiprocessing import Process
 
 def run(command, nice=True):
+  ''' /bin/nice is used to lower the priority of a command if enabled '''
   print("Command is ", command)
   if nice:
     os.system("/bin/nice -n 19 " + command)
@@ -11,6 +12,13 @@ def run(command, nice=True):
   return
 
 def submit_jobs(command_list, n_par, nice=True):
+  '''
+  n_par = number of parallel jobs
+
+  Submitting jobs until n_par of them are running in the same time.
+  A finished job will be remove from the list and another one will be put in queue.
+  If the total number of jobs is smaller than n_par, it will check number of remaining jobs in another while loop.
+  '''
   running_procs = []
   for command in command_list:
     running_procs.append(Process(target=run, args=(command,nice,)))
