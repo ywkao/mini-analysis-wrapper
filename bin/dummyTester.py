@@ -2,6 +2,7 @@
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--input', help='input filename of parameters', default='', type=str)
+parser.add_argument('-o', '--output', help='output filename of result', default='', type=str)
 args = parser.parse_args()
 
 # load parameters
@@ -22,8 +23,7 @@ def dummy_algorithm(parameters):
 result = dummy_algorithm(paramB)
 
 # determine output file name & export result
-x, y, z = tuple( int(ele) for ele in list(paramB) )
-outputName = 'output/result/output_%d_%d_%d.txt' % (x, y, z)
+outputName = args.output
 with open(outputName, 'w') as fout:
     fout.write("# result with {0}\n".format(paramB))
     fout.write("dummy result = {0}\n".format(result))

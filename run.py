@@ -54,7 +54,8 @@ def generate_parameters():
 def create_commands():
     ''' Create commands from a list of text files with generated parameters '''
     for f in parameter_file_list:
-        command = "./bin/dummyTester.py --input %s" % f
+        output_file_name = f.replace('config', 'result').replace('input_namelist', 'output')
+        command = "./bin/dummyTester.py --input %s --output %s" % (f, output_file_name)
         command_list.append(command)
 
 def submit_jobs():
