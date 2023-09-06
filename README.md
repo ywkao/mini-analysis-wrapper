@@ -4,7 +4,7 @@ This is an example analysis wrapper for running multi-threading jobs using pytho
 
 ## Command
 ```
-$ git clone -b branch-example-01 git@github.com:ywkao/mini-analysis-wrapper.git
+$ git clone -b branch-example-02 git@github.com:ywkao/mini-analysis-wrapper.git
 $ cd mini-analysis-wrapper/
 $ ./run.py --dryRun
 $ ./run.py # execute with python multiprocessing module
@@ -29,3 +29,6 @@ $ ./run.py # execute with python multiprocessing module
 | `interface/__init__.py`      | A file turning the directory as a regular package ([more](https://docs.python.org/3/reference/import.html#regular-packages)) |
 | `interface/config.py`        | Placeholder for config parameters specific to an anlaysis        |
 | `interface/parallel_utils.py`| Utility for running jobs parallelly using multiprocessing module |
+
+## Reference
+- https://pynative.com/python-encapsulation/
