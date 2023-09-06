@@ -22,10 +22,10 @@ $ ./run.py # execute with python multiprocessing module
 `-- run.py
 ```
 
-| File                        | Description                                                      |
-| --------------------------- | ---------------------------------------------------------------- |
-| run.py                      | Top-level script steering the analysis flow                      |
-| bin/dummyTester.py          | A script to be replaced by a c++ executable                      |
-| interface/__init__.py       | A file turning the directory as a regular package ([more](https://docs.python.org/3/reference/import.html#regular-packages)) |
-| interface/config.py         | Placeholder for config parameters specific to an anlaysis        |
-| interface/parallel_utils.py | Utility for running jobs parallelly using multiprocessing module |
+| File                         | Description                                                      |
+| ---------------------------- | ---------------------------------------------------------------- |
+| `run.py`                     | Top-level script steering the analysis flow                      |
+| `bin/dummyTester.py`         | A script to be replaced by a c++ executable                      |
+| `interface/__init__.py`      | A file turning the directory as a regular package ([more](https://docs.python.org/3/reference/import.html#regular-packages)) |
+| `interface/config.py`        | Placeholder for config parameters specific to an anlaysis        |
+| `interface/parallel_utils.py`| Utility for running jobs parallelly using multiprocessing module |
