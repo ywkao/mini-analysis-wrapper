@@ -2,9 +2,11 @@
 
 This is an example analysis wrapper for running multi-threading jobs using python multiprocessing module.
 
+This patch branch bypasses priority setting using `/bin/nice`.
+
 ## Command
 ```
-$ git clone -b branch-example-02 git@github.com:ywkao/mini-analysis-wrapper.git
+$ git clone -b patch-example-02 git@github.com:ywkao/mini-analysis-wrapper.git
 $ cd mini-analysis-wrapper/
 $ ./run.py --dryRun
 $ ./run.py # execute with python multiprocessing module
