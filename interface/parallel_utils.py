@@ -19,6 +19,7 @@ def submit_jobs(command_list, n_par, nice=True):
   A finished job will be remove from the list and another one will be put in queue.
   If the total number of jobs is smaller than n_par, it will check number of remaining jobs in another while loop.
   '''
+  nice = False # bypass a system issue about lacking of /bin/nice
   running_procs = []
   for command in command_list:
     running_procs.append(Process(target=run, args=(command,nice,)))
